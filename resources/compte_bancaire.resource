@@ -1,0 +1,54 @@
+*** Settings ***
+Library    SeleniumLibrary
+Resource   commun.resource
+Resource   ../resources/connexion.resource
+
+*** Variables ***
+# Locators 
+${CHAMP_NOM_COMPTE_BANCAIRE}    id=account_name
+${BOUTON_CREER_COMPTE_BANCAIRE}    //button[normalize-space()='Ajouter le compte']
+${MESSAGE_ALERT}    //div[@role='alert']
+${H1_AJOUTER_COMPTE_BANCAIRE}    //h1[normalize-space()='Ajouter un compte bancaire']
+${MENU_BURGER}    //span[@class='navbar-toggler-icon']
+${LIEN_AJOUTER_COMPTE_BANCAIRE}    //a[normalize-space()='Ajouter un compte']
+
+# Messages de l'application (succès ET erreurs) 
+${MSG_AJOUT_COMPTE_REUSSIE}    Ajout du compte bancaire réussi ! Redirection en cours...
+${MSG_COMPTE_INVALIDE}    ERREUR Votre nom de compte bancaire ne doit contenir que des lettres et aucun espace avant ou après.
+
+*** Keywords ***
+Aller Sur Le Formulaire D'ajout D'un Compte Bancaire Premier Compte Uniquement
+    [Documentation]    ⚠️⚠️⚠️ Test manuel ou Parcours Utilisateur UNIQUEMENT❗ car KO pour le CI/CD via Jenkins car dès qu'il y a un compte bancaire déjà enregistré, le formulaire d'ajout n'est plus visible directement, il faut passer par le menu burger.
+    Wait Until Element Is Visible    ${CHAMP_NOM_COMPTE_BANCAIRE}    timeout=10s
+    Element Should Contain    ${H1_AJOUTER_COMPTE_BANCAIRE}    Ajouter un compte bancaire
+
+Aller Sur Le Formulaire D'ajout D'un Compte Bancaire Via Le Menu Burger
+    Wait Until Element Is Visible    ${MENU_BURGER}    timeout=10s
+    Click Element    ${MENU_BURGER}
+    Wait Until Element Is Visible    ${LIEN_AJOUTER_COMPTE_BANCAIRE}    timeout=10s
+    Click Element    ${LIEN_AJOUTER_COMPTE_BANCAIRE}
+    Wait Until Element Is Visible    ${CHAMP_NOM_COMPTE_BANCAIRE}    timeout=10s
+
+Remplir Le Formulaire De Création D'Un Compte Bancaire
+    [Arguments]    ${nom_compte_bancaire}
+    Input Text    ${CHAMP_NOM_COMPTE_BANCAIRE}    ${nom_compte_bancaire}
+
+Valider La Création D'Un Compte Bancaire
+# ✅ "${status}    Run Keyword And Return Status" 
+# Vérifie que le message d'alerte est affiché et récupère son statut mais sans faire échouer le test si le message n'est pas visible (Solution pour contourner les messages d'erreur HTML natifs non visibles dans le DOM)
+    Click Button    ${BOUTON_CREER_COMPTE_BANCAIRE}
+    ${status}    Run Keyword And Return Status    Wait Until Element Is Visible    ${MESSAGE_ALERT}    timeout=5s
+
+Vérifier Création D'un Compte Bancaire Réussie
+    Wait Until Element Is Visible    ${MESSAGE_ALERT}    timeout=10s
+    Element Should Contain    ${MESSAGE_ALERT}    ${MSG_AJOUT_COMPTE_REUSSIE}
+
+Vérifier Message D'erreur Pour Un Compte Bancaire Invalide
+    Wait Until Element Is Visible    ${MESSAGE_ALERT}    timeout=10s
+    Element Should Contain    ${MESSAGE_ALERT}    ${MSG_COMPTE_INVALIDE}
+
+Vérifier Formulaire Compte Bancaire Non Soumis
+    # ✅ Contourne les messages d'erreur HTML natifs qui ne sont pas gérés par l'application et qui ne sont pas affichés dans le DOM
+    Page Should Contain Element    ${CHAMP_NOM_COMPTE_BANCAIRE}
+    Page Should Contain Element    ${H1_AJOUTER_COMPTE_BANCAIRE}
+   
