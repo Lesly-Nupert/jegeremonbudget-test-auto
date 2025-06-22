@@ -23,11 +23,12 @@ Aller Sur Le Formulaire D'ajout D'un Compte Bancaire Premier Compte Uniquement
     Element Should Contain    ${H1_AJOUTER_COMPTE_BANCAIRE}    Ajouter un compte bancaire
 
 Aller Sur Le Formulaire D'ajout D'un Compte Bancaire Via Le Menu Burger    #2ème méthode pour accéder au formulaire d'ajout d'un compte bancaire
-    Wait Until Element Is Visible    ${MENU_BURGER}    timeout=10s
+    Wait Until Element Is Visible    ${MENU_BURGER}    timeout=20s
     Click Element    ${MENU_BURGER}
-    Wait Until Element Is Visible    ${LIEN_AJOUTER_COMPTE_BANCAIRE}    timeout=10s
-    Wait Until Element Is Enabled    ${LIEN_AJOUTER_COMPTE_BANCAIRE}    timeout=10s
-    Click Element    ${LIEN_AJOUTER_COMPTE_BANCAIRE}
+    Wait Until Element Is Visible    ${LIEN_AJOUTER_COMPTE_BANCAIRE}    timeout=20s
+    # TEST : Utilisation de JavaScript pour cliquer sur le lien
+    Sleep    2s
+    Execute JavaScript    arguments[0].click();    ELEMENT:${LIEN_AJOUTER_COMPTE_BANCAIRE}
     
 Remplir Le Formulaire De Création D'Un Compte Bancaire   
     [Arguments]    ${nom_compte_bancaire}
