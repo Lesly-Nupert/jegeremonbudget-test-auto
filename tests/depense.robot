@@ -26,7 +26,7 @@ Test Création D'Une Dépense Valide
     Remplir Le Formulaire De Connexion    ${EMAIL_VALIDE}    ${MDP_VALIDE}
     Valider Le Formulaire De Connexion
     Vérifier Connexion Réussie
-    Aller Sur Le Formulaire D'ajout D'une Dépense
+    Aller Sur Le Formulaire D'ajout D'une Dépense Via Le Lien D'Un Compte Bancaire Existant
     Remplir Le Formulaire De Création D'Une Dépense    ${NOM_DEPENSE_VALIDE}    ${MONTANT_VALIDE}
     Valider La Création D'Une Dépense
     Vérifier Création D'une Dépense Réussie
@@ -37,7 +37,7 @@ Test Création D'Une Dépense Invalide Vide
     Remplir Le Formulaire De Connexion    ${EMAIL_VALIDE}    ${MDP_VALIDE}
     Valider Le Formulaire De Connexion
     Vérifier Connexion Réussie
-    Aller Sur Le Formulaire D'ajout D'une Dépense
+    Aller Sur Le Formulaire D'ajout D'une Dépense Via Le Lien D'Un Compte Bancaire Existant
     Remplir Le Formulaire De Création D'Une Dépense    ${NOM_DEPENSE_INVALIDE_VIDE}    ${MONTANT_VALIDE}
     Valider La Création D'Une Dépense
     Vérifier Formulaire Ajout Dépense Non Soumis
@@ -48,7 +48,7 @@ Test Création D'Une Dépense Invalide Caractère Spécial
     Remplir Le Formulaire De Connexion    ${EMAIL_VALIDE}    ${MDP_VALIDE}
     Valider Le Formulaire De Connexion
     Vérifier Connexion Réussie
-    Aller Sur Le Formulaire D'ajout D'une Dépense
+    Aller Sur Le Formulaire D'ajout D'une Dépense Via Le Lien D'Un Compte Bancaire Existant
     Remplir Le Formulaire De Création D'Une Dépense    ${NOM_DEPENSE_INVALIDE_CARACTERE_SPECIAL}    ${MONTANT_VALIDE}
     Valider La Création D'Une Dépense
     Vérifier Message D'erreur Nom Dépense Invalide
@@ -59,7 +59,7 @@ Test Création D'Une Dépense Invalide Nombre
     Remplir Le Formulaire De Connexion    ${EMAIL_VALIDE}    ${MDP_VALIDE}
     Valider Le Formulaire De Connexion
     Vérifier Connexion Réussie
-    Aller Sur Le Formulaire D'ajout D'une Dépense
+    Aller Sur Le Formulaire D'ajout D'une Dépense Via Le Lien D'Un Compte Bancaire Existant
     Remplir Le Formulaire De Création D'Une Dépense    ${NOM_DEPENSE_INVALIDE_CHIFFRE}    ${MONTANT_VALIDE}
     Valider La Création D'Une Dépense
     Vérifier Message D'erreur Nom Dépense Invalide
@@ -70,7 +70,7 @@ Test Création D'Une Dépense Invalide Espace Début
     Remplir Le Formulaire De Connexion    ${EMAIL_VALIDE}    ${MDP_VALIDE}
     Valider Le Formulaire De Connexion
     Vérifier Connexion Réussie
-    Aller Sur Le Formulaire D'ajout D'une Dépense
+    Aller Sur Le Formulaire D'ajout D'une Dépense Via Le Lien D'Un Compte Bancaire Existant
     Remplir Le Formulaire De Création D'Une Dépense    ${NOM_DEPENSE_INVALIDE_ESPACE_DEBUT}    ${MONTANT_VALIDE}
     Valider La Création D'Une Dépense
     Vérifier Message D'erreur Nom Dépense Invalide
@@ -81,7 +81,7 @@ Test Création D'Une Dépense Invalide Espace Fin
     Remplir Le Formulaire De Connexion    ${EMAIL_VALIDE}    ${MDP_VALIDE}
     Valider Le Formulaire De Connexion
     Vérifier Connexion Réussie
-    Aller Sur Le Formulaire D'ajout D'une Dépense
+    Aller Sur Le Formulaire D'ajout D'une Dépense Via Le Lien D'Un Compte Bancaire Existant
     Remplir Le Formulaire De Création D'Une Dépense    ${NOM_DEPENSE_INVALIDE_ESPACE_FIN}    ${MONTANT_VALIDE}
     Valider La Création D'Une Dépense
     Vérifier Message D'erreur Nom Dépense Invalide
@@ -92,7 +92,7 @@ Test Création D'Une Dépense Invalide Montant Vide
     Remplir Le Formulaire De Connexion    ${EMAIL_VALIDE}    ${MDP_VALIDE}
     Valider Le Formulaire De Connexion
     Vérifier Connexion Réussie
-    Aller Sur Le Formulaire D'ajout D'une Dépense
+    Aller Sur Le Formulaire D'ajout D'une Dépense Via Le Lien D'Un Compte Bancaire Existant
     Remplir Le Formulaire De Création D'Une Dépense    ${NOM_DEPENSE_VALIDE}    ${MONTANT_INVALIDE_VIDE}
     Valider La Création D'Une Dépense
     Vérifier Formulaire Ajout Dépense Non Soumis
@@ -103,7 +103,7 @@ Test Création D'Une Dépense Invalide Montant Négatif
     Remplir Le Formulaire De Connexion    ${EMAIL_VALIDE}    ${MDP_VALIDE}
     Valider Le Formulaire De Connexion
     Vérifier Connexion Réussie
-    Aller Sur Le Formulaire D'ajout D'une Dépense
+    Aller Sur Le Formulaire D'ajout D'une Dépense Via Le Lien D'Un Compte Bancaire Existant
     Remplir Le Formulaire De Création D'Une Dépense    ${NOM_DEPENSE_VALIDE}    ${MONTANT_INVALIDE_NEGATIF}
     Valider La Création D'Une Dépense
     Vérifier Formulaire Ajout Dépense Non Soumis
@@ -114,7 +114,7 @@ Test Création D'Une Dépense Invalide Montant Zéro
     Remplir Le Formulaire De Connexion    ${EMAIL_VALIDE}    ${MDP_VALIDE}
     Valider Le Formulaire De Connexion
     Vérifier Connexion Réussie
-    Aller Sur Le Formulaire D'ajout D'une Dépense
+    Aller Sur Le Formulaire D'ajout D'une Dépense Via Le Lien D'Un Compte Bancaire Existant
     Remplir Le Formulaire De Création D'Une Dépense    ${NOM_DEPENSE_VALIDE}    ${MONTANT_INVALIDE_ZERO}
     Valider La Création D'Une Dépense
     Vérifier Formulaire Ajout Dépense Non Soumis

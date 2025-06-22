@@ -26,7 +26,7 @@ Test Création D'Un Revenu Valide
     Remplir Le Formulaire De Connexion    ${EMAIL_VALIDE}    ${MDP_VALIDE}
     Valider Le Formulaire De Connexion
     Vérifier Connexion Réussie
-    Aller Sur Le Formulaire D'ajout D'un Revenu
+    Aller Sur Le Formulaire D'ajout D'un Revenu Via Le Lien D'Un Compte Bancaire Existant
     Remplir Le Formulaire De Création D'Un Revenu    ${NOM_REVENU_VALIDE}    ${MONTANT_VALIDE}
     Valider La Création D'Un Revenu
     Vérifier Création D'un Revenu Réussie
@@ -37,7 +37,7 @@ Test Création D'Un Revenu Invalide Vide
     Remplir Le Formulaire De Connexion    ${EMAIL_VALIDE}    ${MDP_VALIDE}
     Valider Le Formulaire De Connexion
     Vérifier Connexion Réussie
-    Aller Sur Le Formulaire D'ajout D'un Revenu
+    Aller Sur Le Formulaire D'ajout D'un Revenu Via Le Lien D'Un Compte Bancaire Existant
     Remplir Le Formulaire De Création D'Un Revenu    ${NOM_REVENU_INVALIDE_VIDE}    ${MONTANT_VALIDE}
     Valider La Création D'Un Revenu
     Vérifier Formulaire Ajout Revenu Non Soumis
@@ -48,7 +48,7 @@ Test Création D'Un Revenu Invalide Caractère Spécial
     Remplir Le Formulaire De Connexion    ${EMAIL_VALIDE}    ${MDP_VALIDE}
     Valider Le Formulaire De Connexion
     Vérifier Connexion Réussie
-    Aller Sur Le Formulaire D'ajout D'un Revenu
+    Aller Sur Le Formulaire D'ajout D'un Revenu Via Le Lien D'Un Compte Bancaire Existant
     Remplir Le Formulaire De Création D'Un Revenu    ${NOM_REVENU_INVALIDE_CARACTERE_SPECIAL}    ${MONTANT_VALIDE}
     Valider La Création D'Un Revenu
     Vérifier Message D'erreur Nom Revenu Invalide
@@ -59,7 +59,7 @@ Test Création D'Un Revenu Invalide Nombre
     Remplir Le Formulaire De Connexion    ${EMAIL_VALIDE}    ${MDP_VALIDE}
     Valider Le Formulaire De Connexion
     Vérifier Connexion Réussie
-    Aller Sur Le Formulaire D'ajout D'un Revenu
+    Aller Sur Le Formulaire D'ajout D'un Revenu Via Le Lien D'Un Compte Bancaire Existant
     Remplir Le Formulaire De Création D'Un Revenu    ${NOM_REVENU_INVALIDE_CHIFFRE}    ${MONTANT_VALIDE}
     Valider La Création D'Un Revenu
     Vérifier Message D'erreur Nom Revenu Invalide
@@ -70,7 +70,7 @@ Test Création D'Un Revenu Invalide Espace Début
     Remplir Le Formulaire De Connexion    ${EMAIL_VALIDE}    ${MDP_VALIDE}
     Valider Le Formulaire De Connexion
     Vérifier Connexion Réussie
-    Aller Sur Le Formulaire D'ajout D'un Revenu
+    Aller Sur Le Formulaire D'ajout D'un Revenu Via Le Lien D'Un Compte Bancaire Existant
     Remplir Le Formulaire De Création D'Un Revenu    ${NOM_REVENU_INVALIDE_ESPACE_DEBUT}    ${MONTANT_VALIDE}
     Valider La Création D'Un Revenu
     Vérifier Message D'erreur Nom Revenu Invalide
@@ -81,7 +81,7 @@ Test Création D'Un Revenu Invalide Espace Fin
     Remplir Le Formulaire De Connexion    ${EMAIL_VALIDE}    ${MDP_VALIDE}
     Valider Le Formulaire De Connexion
     Vérifier Connexion Réussie
-    Aller Sur Le Formulaire D'ajout D'un Revenu
+    Aller Sur Le Formulaire D'ajout D'un Revenu Via Le Lien D'Un Compte Bancaire Existant
     Remplir Le Formulaire De Création D'Un Revenu    ${NOM_REVENU_INVALIDE_ESPACE_FIN}    ${MONTANT_VALIDE}
     Valider La Création D'Un Revenu
     Vérifier Message D'erreur Nom Revenu Invalide
@@ -92,7 +92,7 @@ Test Création D'Un Revenu Invalide Montant Vide
     Remplir Le Formulaire De Connexion    ${EMAIL_VALIDE}    ${MDP_VALIDE}
     Valider Le Formulaire De Connexion
     Vérifier Connexion Réussie
-    Aller Sur Le Formulaire D'ajout D'un Revenu
+    Aller Sur Le Formulaire D'ajout D'un Revenu Via Le Lien D'Un Compte Bancaire Existant
     Remplir Le Formulaire De Création D'Un Revenu    ${NOM_REVENU_VALIDE}    ${MONTANT_INVALIDE_VIDE}
     Valider La Création D'Un Revenu
     Vérifier Formulaire Ajout Revenu Non Soumis
@@ -103,7 +103,7 @@ Test Création D'Un Revenu Invalide Montant Négatif
     Remplir Le Formulaire De Connexion    ${EMAIL_VALIDE}    ${MDP_VALIDE}
     Valider Le Formulaire De Connexion
     Vérifier Connexion Réussie
-    Aller Sur Le Formulaire D'ajout D'un Revenu
+    Aller Sur Le Formulaire D'ajout D'un Revenu Via Le Lien D'Un Compte Bancaire Existant
     Remplir Le Formulaire De Création D'Un Revenu    ${NOM_REVENU_VALIDE}    ${MONTANT_INVALIDE_NEGATIF}
     Valider La Création D'Un Revenu
     Vérifier Formulaire Ajout Revenu Non Soumis
@@ -114,7 +114,7 @@ Test Création D'Un Revenu Invalide Montant Zéro
     Remplir Le Formulaire De Connexion    ${EMAIL_VALIDE}    ${MDP_VALIDE}
     Valider Le Formulaire De Connexion
     Vérifier Connexion Réussie
-    Aller Sur Le Formulaire D'ajout D'un Revenu
+    Aller Sur Le Formulaire D'ajout D'un Revenu Via Le Lien D'Un Compte Bancaire Existant
     Remplir Le Formulaire De Création D'Un Revenu    ${NOM_REVENU_VALIDE}    ${MONTANT_INVALIDE_ZERO}
     Valider La Création D'Un Revenu
     Vérifier Formulaire Ajout Revenu Non Soumis

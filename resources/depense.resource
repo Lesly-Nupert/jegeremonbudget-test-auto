@@ -9,7 +9,7 @@ ${CHAMP_MONTANT}    id=amount
 ${BOUTON_CREER_DEPENSE}    //button[normalize-space()='Ajouter la dépense']
 ${MESSAGE_ALERT}    //div[@role='alert']
 ${H1_AJOUTER_DEPENSE}    //h1[normalize-space()='Ajouter une dépense']
-${BALANCE}    p[aria-label='Balance du compte'] span
+${BALANCE_COMPTE_BANCAIRE}    css=p[aria-label='Balance du compte'] span
 ${LIEN_AJOUTER_UNE_DEPENSE}    //a[normalize-space()='Ajouter une dépense']
 ${LIEN_COMPTE_CHOISI_POUR_LE_TEST}    //p[normalize-space()='Compte Test']
 
@@ -19,6 +19,11 @@ ${MSG_NOM_DEPENSE_INVALIDE}    ERREUR Le nom de la dépense ne doit contenir que
 
 *** Keywords ***
 Aller Sur Le Formulaire D'ajout D'une Dépense
+    Wait Until Element Is Visible    ${LIEN_AJOUTER_UNE_DEPENSE}    timeout=10s
+    Click Element    ${LIEN_AJOUTER_UNE_DEPENSE}
+    Wait Until Element Is Visible    ${CHAMP_NOM_DEPENSE}    timeout=10s
+
+Aller Sur Le Formulaire D'ajout D'une Dépense Via Le Lien D'Un Compte Bancaire Existant
     Wait Until Element Is Visible    ${LIEN_COMPTE_CHOISI_POUR_LE_TEST}    timeout=10s
     Click Element    ${LIEN_COMPTE_CHOISI_POUR_LE_TEST}
     Wait Until Element Is Visible    ${LIEN_AJOUTER_UNE_DEPENSE}    timeout=10s
@@ -48,4 +53,10 @@ Vérifier Formulaire Ajout Dépense Non Soumis
     # ✅ Contourne les messages d'erreur HTML natifs qui ne sont pas gérés par l'application et qui ne sont pas affichés dans le DOM
     Page Should Contain Element    ${CHAMP_NOM_DEPENSE}
     Page Should Contain Element    ${H1_AJOUTER_DEPENSE}
+
+Vérifier Solde Du Compte
+    [Arguments]    ${solde_attendu}
+    Wait Until Element Is Visible    ${BALANCE_COMPTE_BANCAIRE}    timeout=20s
+    Wait Until Element Contains    ${BALANCE_COMPTE_BANCAIRE}    ${solde_attendu}
+   
    
