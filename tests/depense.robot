@@ -1,23 +1,24 @@
 *** Settings ***
-Library    SeleniumLibrary
-Resource   ../resources/depense.resource
-Resource   ../resources/connexion.resource
-Test Setup    Ouvrir Le Navigateur Et Accéder À L'Application
+Library          SeleniumLibrary
+Resource         ../resources/commun.resource
+Resource         ../resources/depense.resource
+Resource         ../resources/connexion.resource
+Test Setup       Ouvrir Le Navigateur Et Accéder À L'Application
 Test Teardown    Fermer Le Navigateur
 
 *** Variables ***
-${EMAIL_VALIDE}    test100@test.com
-${MDP_VALIDE}    Testtest7+
-${NOM_DEPENSE_VALIDE}    Dépense valide
-${NOM_DEPENSE_INVALIDE_VIDE}    ${EMPTY}
+${EMAIL_VALIDE}                              test100@test.com
+${MDP_VALIDE}                                Testtest7+
+${NOM_DEPENSE_VALIDE}                        Dépense valide
+${NOM_DEPENSE_INVALIDE_VIDE}                 ${EMPTY}
 ${NOM_DEPENSE_INVALIDE_CARACTERE_SPECIAL}    Dépense*
-${NOM_DEPENSE_INVALIDE_CHIFFRE}    Dépense1
-${NOM_DEPENSE_INVALIDE_ESPACE_DEBUT}    ${SPACE}Dépense
-${NOM_DEPENSE_INVALIDE_ESPACE_FIN}    Dépense${SPACE}
-${MONTANT_VALIDE}    100
-${MONTANT_INVALIDE_VIDE}    ${EMPTY}
-${MONTANT_INVALIDE_NEGATIF}    -100
-${MONTANT_INVALIDE_ZERO}    0
+${NOM_DEPENSE_INVALIDE_CHIFFRE}              Dépense1
+${NOM_DEPENSE_INVALIDE_ESPACE_DEBUT}         ${SPACE}Dépense
+${NOM_DEPENSE_INVALIDE_ESPACE_FIN}           Dépense${SPACE}
+${MONTANT_VALIDE}                            100
+${MONTANT_INVALIDE_VIDE}                     ${EMPTY}
+${MONTANT_INVALIDE_NEGATIF}                  -100
+${MONTANT_INVALIDE_ZERO}                     0
 
 *** Test Cases ***
 Test Création D'Une Dépense Valide

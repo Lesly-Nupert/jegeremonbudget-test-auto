@@ -1,19 +1,20 @@
 *** Settings ***
-Library    SeleniumLibrary
-Resource   ../resources/compte_bancaire.resource
-Resource   ../resources/connexion.resource
-Test Setup    Ouvrir Le Navigateur Et Accéder À L'Application
+Library          SeleniumLibrary
+Resource         ../resources/commun.resource
+Resource         ../resources/compte_bancaire.resource
+Resource         ../resources/connexion.resource
+Test Setup       Ouvrir Le Navigateur Et Accéder À L'Application
 Test Teardown    Fermer Le Navigateur
 
 *** Variables ***
-${EMAIL_VALIDE}    test100@test.com
-${MDP_VALIDE}    Testtest7+
-${NOM_COMPTE_BANCAIRE_VALIDE}    Compte Test
-${NOM_COMPTE_BANCAIRE_INVALIDE_VIDE}    ${EMPTY}
+${EMAIL_VALIDE}                                      test100@test.com
+${MDP_VALIDE}                                        Testtest7+
+${NOM_COMPTE_BANCAIRE_VALIDE}                        Compte Test
+${NOM_COMPTE_BANCAIRE_INVALIDE_VIDE}                 ${EMPTY}
 ${NOM_COMPTE_BANCAIRE_INVALIDE_CARACTERE_SPECIAL}    Compte Test*
-${NOM_COMPTE_BANCAIRE_INVALIDE_CHIFFRE}    Compte 1
-${NOM_COMPTE_BANCAIRE_INVALIDE_ESPACE_DEBUT}    ${SPACE}Compte Test
-${NOM_COMPTE_BANCAIRE_INVALIDE_ESPACE_FIN}    Compte Test${SPACE}
+${NOM_COMPTE_BANCAIRE_INVALIDE_CHIFFRE}              Compte 1
+${NOM_COMPTE_BANCAIRE_INVALIDE_ESPACE_DEBUT}         ${SPACE}Compte Test
+${NOM_COMPTE_BANCAIRE_INVALIDE_ESPACE_FIN}           Compte Test${SPACE}
 
 *** Test Cases ***
 Test Création D'Un Compte Bancaire Valide Via Le Burger

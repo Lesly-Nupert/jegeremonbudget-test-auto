@@ -15,6 +15,7 @@ ${H1_INSCRIPTION}        //h1[normalize-space()='Inscription']
 ${H1_CONNEXION}          //h1[normalize-space()='Connexion']
 
 # Messages de l'application (succès ET erreurs)
+# Le Mot Clé "Vérifier Formulaire Inscription Non Soumis" gère les messages d'erreur HTML natifs
 ${MSG_INSCRIPTION_REUSSIE}  Inscription réussie ! Redirection en cours...
 ${MSG_EMAIL_INVALIDE}       ERREUR Format d'email attendu : exemple@exemple.com
 ${MSG_EMAIL_EXISTE}         ERREUR Cet email existe déjà
@@ -23,7 +24,7 @@ ${MSG_MDP_INVALIDE}         ERREUR Votre mot de passe doit contenir entre 8 et 1
 
 *** Keywords ***
 Générer Email Unique
-    # ✅ Génère un email unique basé sur le timestamp actuel pour éviter les doublons lors des tests automatisés en CI/CD.
+    [Documentation]    ✅ Génère un email unique basé sur le timestamp actuel pour éviter les doublons lors des tests automatisés en CI/CD.
     ${timestamp}    Get Time    epoch
     # Construit l'email unique en concaténant le timestamp
     ${email_unique}    Set Variable    test.${timestamp}@test.com
@@ -55,6 +56,6 @@ Vérifier Message D'Erreur
     Element Should Contain    ${MESSAGE_ALERT}    ${message_attendu}
 
 Vérifier Formulaire Inscription Non Soumis
-    # ✅ Contourne les messages d'erreur HTML natifs qui ne sont pas gérés par l'application et qui ne sont pas affichés dans le DOM
+    [Documentation]    Contourne les messages d'erreur HTML natifs qui ne sont pas gérés par l'application et qui ne sont pas affichés dans le DOM
     Page Should Contain Element    ${CHAMP_NOM}
     Page Should Contain Element    ${H1_INSCRIPTION}

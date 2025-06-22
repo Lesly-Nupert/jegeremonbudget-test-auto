@@ -1,25 +1,27 @@
 *** Settings ***
-Library    SeleniumLibrary
-Resource   ../resources/revenu.resource
-Resource   ../resources/connexion.resource
-Test Setup    Ouvrir Le Navigateur Et Accéder À L'Application
+Library          SeleniumLibrary
+Resource         ../resources/commun.resource
+Resource         ../resources/revenu.resource
+Resource         ../resources/connexion.resource
+Test Setup       Ouvrir Le Navigateur Et Accéder À L'Application
 Test Teardown    Fermer Le Navigateur
 
 *** Variables ***
-${EMAIL_VALIDE}    test100@test.com
-${MDP_VALIDE}    Testtest7+
-${NOM_REVENU_VALIDE}    Revenu valide
-${NOM_REVENU_INVALIDE_VIDE}    ${EMPTY}
+${EMAIL_VALIDE}                             test100@test.com
+${MDP_VALIDE}                               Testtest7+
+${NOM_REVENU_VALIDE}                        Revenu valide
+${NOM_REVENU_INVALIDE_VIDE}                 ${EMPTY}
 ${NOM_REVENU_INVALIDE_CARACTERE_SPECIAL}    Revenu*
-${NOM_REVENU_INVALIDE_CHIFFRE}    Revenu1
-${NOM_REVENU_INVALIDE_ESPACE_DEBUT}    ${SPACE}Revenu
-${NOM_REVENU_INVALIDE_ESPACE_FIN}    Revenu${SPACE}
-${MONTANT_VALIDE}    100
-${MONTANT_INVALIDE_VIDE}    ${EMPTY}
-${MONTANT_INVALIDE_NEGATIF}    -100
-${MONTANT_INVALIDE_ZERO}    0
+${NOM_REVENU_INVALIDE_CHIFFRE}              Revenu1
+${NOM_REVENU_INVALIDE_ESPACE_DEBUT}         ${SPACE}Revenu
+${NOM_REVENU_INVALIDE_ESPACE_FIN}           Revenu${SPACE}
+${MONTANT_VALIDE}                           100
+${MONTANT_INVALIDE_VIDE}                    ${EMPTY}
+${MONTANT_INVALIDE_NEGATIF}                 -100
+${MONTANT_INVALIDE_ZERO}                    0
 
 *** Test Cases ***
+# --- TESTS POSITIFS ---
 Test Création D'Un Revenu Valide
     [Documentation]    Créer un revenu valide
     Aller Sur Le Formulaire De Connexion
@@ -31,6 +33,7 @@ Test Création D'Un Revenu Valide
     Valider La Création D'Un Revenu
     Vérifier Création D'un Revenu Réussie
 
+# --- TESTS NÉGATIFS ---
 Test Création D'Un Revenu Invalide Vide
     [Documentation]    Créer un revenu invalide (vide)
     Aller Sur Le Formulaire De Connexion

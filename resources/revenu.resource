@@ -9,16 +9,15 @@ ${CHAMP_MONTANT}    id=amount
 ${BOUTON_CREER_REVENU}    //button[normalize-space()='Ajouter le revenu']
 ${MESSAGE_ALERT}    //div[@role='alert']
 ${H1_AJOUTER_REVENU}    //h1[normalize-space()='Ajouter un revenu']
-${BALANCE_COMPTE_BANCAIRE}    css=p[aria-label='Balance du compte'] span
 ${LIEN_AJOUTER_UN_REVENU}    //a[normalize-space()='Ajouter un revenu']
 ${LIEN_COMPTE_CHOISI_POUR_LE_TEST}    //p[normalize-space()='Compte Test']
 
-# Messages de l'application (succès ET erreurs) 
+# Messages de l'application (succès ET erreurs)
+# Le Mot Clé "Vérifier Formulaire Ajout Revenu Non Soumis" gère les messages d'erreur HTML natifs 
 ${MSG_AJOUT_REVENU_RÉUSSI}    Revenu ajouté avec succès !
 ${MSG_NOM_REVENU_INVALIDE}    ERREUR Le nom du revenu ne doit contenir que des lettres et aucun espace avant ou après.
 
 *** Keywords ***
-
 Aller Sur Le Formulaire D'ajout D'un Revenu
     Wait Until Element Is Visible    ${LIEN_AJOUTER_UN_REVENU}    timeout=10s
     Click Element    ${LIEN_AJOUTER_UN_REVENU}
@@ -55,12 +54,4 @@ Vérifier Formulaire Ajout Revenu Non Soumis
     Page Should Contain Element    ${CHAMP_NOM_REVENU}
     Page Should Contain Element    ${H1_AJOUTER_REVENU}
 
-Vérifier Solde Du Compte Avant Création D'un Revenu
-    [Arguments]    ${solde_attendu}
-    Wait Until Element Is Visible    ${BALANCE_COMPTE_BANCAIRE}    timeout=20s
-    Wait Until Element Contains    ${BALANCE_COMPTE_BANCAIRE}    ${solde_attendu}
-   
-Vérifier Solde Du Compte Après Création D'un Revenu
-    [Arguments]    ${solde_attendu}
-    Wait Until Element Is Visible    ${BALANCE_COMPTE_BANCAIRE}    timeout=20s
-    Wait Until Element Contains    ${BALANCE_COMPTE_BANCAIRE}    ${solde_attendu}
+# Vérifier Solde Du Compte - ⚠️ Ce mot clé est dans commun.resource

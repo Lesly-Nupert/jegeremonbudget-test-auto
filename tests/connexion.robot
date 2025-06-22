@@ -1,21 +1,22 @@
 *** Settings ***
-Library    SeleniumLibrary
-Resource   ../resources/connexion.resource
-Test Setup    Ouvrir Le Navigateur Et Accéder À L'Application
+Library          SeleniumLibrary
+Resource         ../resources/commun.resource
+Resource         ../resources/connexion.resource
+Test Setup       Ouvrir Le Navigateur Et Accéder À L'Application
 Test Teardown    Fermer Le Navigateur
 Test Template    Template Test Connexion
 
 *** Variables ***
 # ✅ Données de test factices sinon il aurait fallu les mettre dans le .env pour plus de sécurité
-${EMAIL_VALIDE}    test100@test.com
-${EMAIL_INVALIDE}    test100@test
-${EMAIL_INVALIDE_SANS_AROBASE}    test.com
-${EMAIL_INVALIDE_CARACTERE_SPECIAL}    test*@test.com
-${MDP_VALIDE}    Testtest7+
-${MDP_INVALIDE_7_CARACTERES}    Test12+
-${MDP_INVALIDE_13_CARACTERES}    Test12345678+
-${MDP_INVALIDE_SANS_MAJUSCULE}    test1234+
-${MDP_INVALIDE_SANS_CHIFFRE}    Testmdp+
+${EMAIL_VALIDE}                           test100@test.com
+${EMAIL_INVALIDE}                         test100@test
+${EMAIL_INVALIDE_SANS_AROBASE}            test.com
+${EMAIL_INVALIDE_CARACTERE_SPECIAL}       test*@test.com
+${MDP_VALIDE}                             Testtest7+
+${MDP_INVALIDE_7_CARACTERES}              Test12+
+${MDP_INVALIDE_13_CARACTERES}             Test12345678+
+${MDP_INVALIDE_SANS_MAJUSCULE}            test1234+
+${MDP_INVALIDE_SANS_CHIFFRE}              Testmdp+
 ${MDP_INVALIDE_SANS_CARACTERE_SPECIAL}    Test1234
 
 

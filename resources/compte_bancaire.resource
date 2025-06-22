@@ -12,17 +12,17 @@ ${H1_AJOUTER_COMPTE_BANCAIRE}    //h1[normalize-space()='Ajouter un compte banca
 ${MENU_BURGER}    //span[@class='navbar-toggler-icon']
 ${LIEN_AJOUTER_COMPTE_BANCAIRE}    //a[normalize-space()='Ajouter un compte']
 
-# Messages de l'application (succès ET erreurs) 
+# Messages de l'application (succès ET erreurs)
+# Le Mot Clé "Vérifier Formulaire Compte Bancaire Non Soumis" gère les messages d'erreur HTML natifs 
 ${MSG_AJOUT_COMPTE_REUSSIE}    Ajout du compte bancaire réussi ! Redirection en cours...
 ${MSG_COMPTE_INVALIDE}    ERREUR Votre nom de compte bancaire ne doit contenir que des lettres et aucun espace avant ou après.
 
 *** Keywords ***
 Aller Sur Le Formulaire D'ajout D'un Compte Bancaire Premier Compte Uniquement
-    [Documentation]    ⚠️⚠️⚠️ Test manuel ou Parcours Utilisateur UNIQUEMENT❗ car KO pour le CI/CD via Jenkins car dès qu'il y a un compte bancaire déjà enregistré, le formulaire d'ajout n'est plus visible directement, il faut passer par le menu burger.
     Wait Until Element Is Visible    ${CHAMP_NOM_COMPTE_BANCAIRE}    timeout=10s
     Element Should Contain    ${H1_AJOUTER_COMPTE_BANCAIRE}    Ajouter un compte bancaire
 
-Aller Sur Le Formulaire D'ajout D'un Compte Bancaire Via Le Menu Burger
+Aller Sur Le Formulaire D'ajout D'un Compte Bancaire Via Le Menu Burger    #2ème méthode pour accéder au formulaire d'ajout d'un compte bancaire
     Wait Until Element Is Visible    ${MENU_BURGER}    timeout=10s
     Click Element    ${MENU_BURGER}
     Wait Until Element Is Visible    ${LIEN_AJOUTER_COMPTE_BANCAIRE}    timeout=10s

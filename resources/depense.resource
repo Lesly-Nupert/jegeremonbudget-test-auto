@@ -9,11 +9,11 @@ ${CHAMP_MONTANT}    id=amount
 ${BOUTON_CREER_DEPENSE}    //button[normalize-space()='Ajouter la dépense']
 ${MESSAGE_ALERT}    //div[@role='alert']
 ${H1_AJOUTER_DEPENSE}    //h1[normalize-space()='Ajouter une dépense']
-${BALANCE_COMPTE_BANCAIRE}    css=p[aria-label='Balance du compte'] span
 ${LIEN_AJOUTER_UNE_DEPENSE}    //a[normalize-space()='Ajouter une dépense']
 ${LIEN_COMPTE_CHOISI_POUR_LE_TEST}    //p[normalize-space()='Compte Test']
 
 # Messages de l'application (succès ET erreurs) 
+# Le Mot Clé "Vérifier Formulaire Ajout Dépense Non Soumis" gère les messages d'erreur HTML natifs
 ${MSG_AJOUT_DEPENSE_RÉUSSI}    Dépense ajoutée avec succès !
 ${MSG_NOM_DEPENSE_INVALIDE}    ERREUR Le nom de la dépense ne doit contenir que des lettres et aucun espace avant ou après.
 
@@ -54,9 +54,7 @@ Vérifier Formulaire Ajout Dépense Non Soumis
     Page Should Contain Element    ${CHAMP_NOM_DEPENSE}
     Page Should Contain Element    ${H1_AJOUTER_DEPENSE}
 
-Vérifier Solde Du Compte
-    [Arguments]    ${solde_attendu}
-    Wait Until Element Is Visible    ${BALANCE_COMPTE_BANCAIRE}    timeout=20s
-    Wait Until Element Contains    ${BALANCE_COMPTE_BANCAIRE}    ${solde_attendu}
+# Vérifier Solde Du Compte - ⚠️ Ce mot clé est dans commun.resource
+
    
    

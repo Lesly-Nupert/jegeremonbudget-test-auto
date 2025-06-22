@@ -1,11 +1,12 @@
 *** Settings ***
 Library           SeleniumLibrary
+Resource          ../resources/commun.resource
 Resource          ../resources/inscription.resource
 Test Setup        Ouvrir Le Navigateur Et Accéder À L'Application
 Test Teardown     Fermer Le Navigateur
 
 *** Variables ***
-# Données de test
+# ✅ Données de test factices sinon il aurait fallu les mettre dans le .env pour plus de sécurité
 ${NOM_VALIDE}            test
 ${EMAIL_VALIDE}          test@test.com   # Utilise un email unique généré par le mot-clé "Générer Email Unique"
 ${EMAIL_INVALIDE}        test@test

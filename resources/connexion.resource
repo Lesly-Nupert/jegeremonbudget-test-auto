@@ -12,6 +12,7 @@ ${MESSAGE_ALERT}    //div[@role='alert']
 ${H1_CONNEXION}          //h1[normalize-space()='Connexion']
 
 # Messages de l'application (succès ET erreurs)
+# Le Mot Clé "Vérifier Formulaire Connexion Non Soumis" gère les messages d'erreur HTML natifs
 ${MSG_CONNEXION_REUSSIE}    Connexion réussie ! Redirection en cours...
 ${MSG_EMAIL_INVALIDE_CONNEXION}    ERREUR Format d'email attendu : exemple@exemple.com
 ${MSG_MDP_INVALIDE_CONNEXION}    ERREUR Votre mot de passe doit contenir entre 8 et 12 caractères, avec au moins une lettre majuscule, un chiffre et un caractère spécial.
@@ -42,7 +43,7 @@ Vérifier Message D'Erreur Connexion
     Element Should Contain    ${MESSAGE_ALERT}    ${message_attendu}
 
 Vérifier Formulaire Connexion Non Soumis
-    # ✅ Contourne les messages d'erreur HTML natifs qui ne sont pas gérés par l'application et qui ne sont pas affichés dans le DOM
+    [Documentation]    Contourne les messages d'erreur HTML natifs qui ne sont pas gérés par l'application et qui ne sont pas affichés dans le DOM
     Page Should Contain Element    ${H1_CONNEXION}
     Page Should Contain Element    ${CHAMP_EMAIL_CONNEXION}
     
