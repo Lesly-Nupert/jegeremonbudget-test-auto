@@ -30,9 +30,9 @@ Aller Sur Le Formulaire D'ajout D'un Compte Bancaire Via Le Menu Burger    #2èm
     Sleep    2s
     # Fonctionne mais trop long
     # Execute JavaScript    document.querySelector("body > div:nth-child(1) > nav:nth-child(1) > div:nth-child(1) > div:nth-child(3) > ul:nth-child(1) > li:nth-child(2) > a:nth-child(1)").click();
-    
+
     # Test avec cette syntaxe plus lisible
-    Execute JavaScript    document.querySelector("a[href*='ajouter-compte']").click();
+    Execute JavaScript    document.querySelector("a[href='#/addAccount']").click();
     
 Remplir Le Formulaire De Création D'Un Compte Bancaire   
     [Arguments]    ${nom_compte_bancaire}
