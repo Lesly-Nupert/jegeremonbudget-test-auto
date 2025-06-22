@@ -28,7 +28,7 @@ Aller Sur Le Formulaire D'ajout D'un Compte Bancaire Via Le Menu Burger    #2èm
     Wait Until Element Is Visible    ${LIEN_AJOUTER_COMPTE_BANCAIRE}    timeout=20s
     # TEST : Utilisation de JavaScript pour cliquer sur le lien
     Sleep    2s
-    Execute JavaScript    arguments[0].click();    ELEMENT:${LIEN_AJOUTER_COMPTE_BANCAIRE}
+    Execute JavaScript    arguments[0].click()    ELEMENT:${LIEN_AJOUTER_COMPTE_BANCAIRE}
     
 Remplir Le Formulaire De Création D'Un Compte Bancaire   
     [Arguments]    ${nom_compte_bancaire}
