@@ -7,7 +7,7 @@ Test Teardown     Fermer Le Navigateur
 *** Variables ***
 # Données de test
 ${NOM_VALIDE}            test
-${EMAIL_VALIDE}          test@test.com
+${EMAIL_VALIDE}          test@test.com   # Utilise un email unique généré par le mot-clé "Générer Email Unique"
 ${EMAIL_INVALIDE}        test@test
 ${EMAIL_EXISTANT}        test100@test.com
 ${MDP_VALIDE}            Test1234+

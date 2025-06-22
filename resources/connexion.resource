@@ -28,6 +28,7 @@ Remplir Le Formulaire De Connexion
 
 Valider Le Formulaire De Connexion
     # ✅ "${status}    Run Keyword And Return Status" # Vérifie que le message d'alerte est affiché et récupère son statut mais sans faire échouer le test si le message n'est pas visible (Solution pour contourner les messages d'erreur HTML natifs non visibles dans le DOM)
+    Wait Until Element Is Visible    ${BOUTON_CONNEXION}    timeout=10s
     Click Button    ${BOUTON_CONNEXION}
     ${status}    Run Keyword And Return Status    Wait Until Element Is Visible    ${MESSAGE_ALERT}    timeout=5s
 
@@ -42,5 +43,6 @@ Vérifier Message D'Erreur Connexion
 
 Vérifier Formulaire Connexion Non Soumis
     # ✅ Contourne les messages d'erreur HTML natifs qui ne sont pas gérés par l'application et qui ne sont pas affichés dans le DOM
-    Page Should Contain Element    ${CHAMP_EMAIL_CONNEXION}
     Page Should Contain Element    ${H1_CONNEXION}
+    Page Should Contain Element    ${CHAMP_EMAIL_CONNEXION}
+    

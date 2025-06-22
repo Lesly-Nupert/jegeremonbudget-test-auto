@@ -29,7 +29,7 @@ Aller Sur Le Formulaire D'ajout D'un Compte Bancaire Via Le Menu Burger
     Click Element    ${LIEN_AJOUTER_COMPTE_BANCAIRE}
     Wait Until Element Is Visible    ${CHAMP_NOM_COMPTE_BANCAIRE}    timeout=10s
 
-Remplir Le Formulaire De Création D'Un Compte Bancaire
+Remplir Le Formulaire De Création D'Un Compte Bancaire   
     [Arguments]    ${nom_compte_bancaire}
     Input Text    ${CHAMP_NOM_COMPTE_BANCAIRE}    ${nom_compte_bancaire}
 
@@ -51,4 +51,5 @@ Vérifier Formulaire Compte Bancaire Non Soumis
     # ✅ Contourne les messages d'erreur HTML natifs qui ne sont pas gérés par l'application et qui ne sont pas affichés dans le DOM
     Page Should Contain Element    ${CHAMP_NOM_COMPTE_BANCAIRE}
     Page Should Contain Element    ${H1_AJOUTER_COMPTE_BANCAIRE}
+    
    

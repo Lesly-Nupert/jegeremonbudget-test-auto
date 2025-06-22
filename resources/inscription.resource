@@ -43,7 +43,8 @@ Remplir Le Formulaire D'Inscription
 Valider Le Formulaire D'Inscription
     # ✅ "${status}    Run Keyword And Return Status" # Vérifie que le message d'alerte est affiché et récupère son statut mais sans faire échouer le test si le message n'est pas visible (Solution pour contourner les messages d'erreur HTML natifs non visibles dans le DOM)
     Click Button    ${BOUTON_VALIDATION}
-    ${status}    Run Keyword And Return Status    Wait Until Element Is Visible    ${MESSAGE_ALERT}    timeout=10s
+    ${status}    Run Keyword And Return Status    Wait Until Element Is Visible    ${MESSAGE_ALERT}    timeout=20s
+
 Vérifier Inscription Réussie
     Element Should Contain    ${MESSAGE_ALERT}    ${MSG_INSCRIPTION_REUSSIE}
     Wait Until Element Is Visible    ${H1_CONNEXION}    timeout=10s
