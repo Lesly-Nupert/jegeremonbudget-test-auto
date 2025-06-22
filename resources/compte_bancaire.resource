@@ -26,11 +26,12 @@ Aller Sur Le Formulaire D'ajout D'un Compte Bancaire Via Le Menu Burger    #2èm
     Wait Until Element Is Visible    ${MENU_BURGER}    timeout=10s
     Click Element    ${MENU_BURGER}
     Wait Until Element Is Visible    ${LIEN_AJOUTER_COMPTE_BANCAIRE}    timeout=10s
+    Wait Until Element Is Enabled    ${LIEN_AJOUTER_COMPTE_BANCAIRE}    timeout=10s
     Click Element    ${LIEN_AJOUTER_COMPTE_BANCAIRE}
-    Wait Until Element Is Visible    ${CHAMP_NOM_COMPTE_BANCAIRE}    timeout=10s
-
+    
 Remplir Le Formulaire De Création D'Un Compte Bancaire   
     [Arguments]    ${nom_compte_bancaire}
+    Wait Until Element Is Visible    ${CHAMP_NOM_COMPTE_BANCAIRE}    timeout=10s
     Input Text    ${CHAMP_NOM_COMPTE_BANCAIRE}    ${nom_compte_bancaire}
 
 Valider La Création D'Un Compte Bancaire
