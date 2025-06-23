@@ -8,7 +8,7 @@ Test Template    Template Test Connexion
 
 *** Variables ***
 # ✅ Données de test factices sinon il aurait fallu les mettre dans le .env pour plus de sécurité
-${EMAIL_VALIDE}                           test100@test.com
+${EMAIL_VALIDE}                           test100@test.com${EMPTY}
 ${EMAIL_INVALIDE}                         test100@test
 ${EMAIL_INVALIDE_SANS_AROBASE}            test.com
 ${EMAIL_INVALIDE_CARACTERE_SPECIAL}       test*@test.com
