@@ -71,7 +71,7 @@ JEGEREMONBUDGET-TEST-AUTO/
 
 | Technologie | Usage |
 |-------------|-------|
-| **Robot Framework** | Framework de test automatisé |
+| **Robot Framework** | Framework d'automatisation de tests |
 | **SeleniumLibrary** | Pilotage navigateur web |
 | **Python** | Langage support Robot Framework |
 | **Jenkins** | Pipeline CI/CD et rapports |
