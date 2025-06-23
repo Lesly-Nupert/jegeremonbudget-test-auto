@@ -3,3 +3,4 @@ results/
 *.html
 *.xml
 selenium-screenshot-*.png
+captures_readme/
