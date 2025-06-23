@@ -19,6 +19,7 @@ ${NOM_COMPTE_BANCAIRE_INVALIDE_ESPACE_FIN}           Compte Test${SPACE}
 *** Test Cases ***
 Test Création D'Un Compte Bancaire Valide Via Le Burger
     [Documentation]    Créer un premier compte bancaire valide
+    [Tags]    critical
     Aller Sur Le Formulaire De Connexion
     Remplir Le Formulaire De Connexion    ${EMAIL_VALIDE}    ${MDP_VALIDE}
     Valider Le Formulaire De Connexion
@@ -30,6 +31,7 @@ Test Création D'Un Compte Bancaire Valide Via Le Burger
 
 Test Création D'Un Compte Bancaire Invalide Vide
     [Documentation]    Créer un compte bancaire invalide (vide)
+    [Tags]    medium
     Aller Sur Le Formulaire De Connexion
     Remplir Le Formulaire De Connexion    ${EMAIL_VALIDE}    ${MDP_VALIDE}
     Valider Le Formulaire De Connexion
@@ -41,6 +43,7 @@ Test Création D'Un Compte Bancaire Invalide Vide
 
 Test Création D'Un Compte Bancaire Invalide Caractère Spécial
     [Documentation]    Créer un compte bancaire invalide (caractère spécial)
+    [Tags]    high
     Aller Sur Le Formulaire De Connexion
     Remplir Le Formulaire De Connexion    ${EMAIL_VALIDE}    ${MDP_VALIDE}
     Valider Le Formulaire De Connexion
@@ -52,6 +55,7 @@ Test Création D'Un Compte Bancaire Invalide Caractère Spécial
 
 Test Création D'Un Compte Bancaire Invalide Nombre
     [Documentation]    Créer un compte bancaire invalide (nombre)
+    [Tags]    high
     Aller Sur Le Formulaire De Connexion
     Remplir Le Formulaire De Connexion    ${EMAIL_VALIDE}    ${MDP_VALIDE}
     Valider Le Formulaire De Connexion
@@ -63,6 +67,7 @@ Test Création D'Un Compte Bancaire Invalide Nombre
 
 Test Création D'Un Compte Bancaire Invalide Espace Début
     [Documentation]    Créer un compte bancaire invalide (espace au début)
+    [Tags]    high
     Aller Sur Le Formulaire De Connexion
     Remplir Le Formulaire De Connexion    ${EMAIL_VALIDE}    ${MDP_VALIDE}
     Valider Le Formulaire De Connexion
@@ -74,6 +79,7 @@ Test Création D'Un Compte Bancaire Invalide Espace Début
 
 Test Création D'Un Compte Bancaire Invalide Espace Fin
     [Documentation]    Créer un compte bancaire invalide (espace à la fin)
+    [Tags]    high
     Aller Sur Le Formulaire De Connexion
     Remplir Le Formulaire De Connexion    ${EMAIL_VALIDE}    ${MDP_VALIDE}
     Valider Le Formulaire De Connexion

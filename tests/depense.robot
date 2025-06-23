@@ -23,6 +23,7 @@ ${MONTANT_INVALIDE_ZERO}                     0
 *** Test Cases ***
 Test Création D'Une Dépense Valide
     [Documentation]    Créer une dépense valide
+    [Tags]    critical
     Aller Sur Le Formulaire De Connexion
     Remplir Le Formulaire De Connexion    ${EMAIL_VALIDE}    ${MDP_VALIDE}
     Valider Le Formulaire De Connexion
@@ -34,6 +35,7 @@ Test Création D'Une Dépense Valide
 
 Test Création D'Une Dépense Invalide Vide
     [Documentation]    Créer une dépense invalide (vide)
+    [Tags]    medium
     Aller Sur Le Formulaire De Connexion
     Remplir Le Formulaire De Connexion    ${EMAIL_VALIDE}    ${MDP_VALIDE}
     Valider Le Formulaire De Connexion
@@ -45,6 +47,7 @@ Test Création D'Une Dépense Invalide Vide
 
 Test Création D'Une Dépense Invalide Caractère Spécial
     [Documentation]    Créer une dépense invalide (caractère spécial)
+    [Tags]    high
     Aller Sur Le Formulaire De Connexion
     Remplir Le Formulaire De Connexion    ${EMAIL_VALIDE}    ${MDP_VALIDE}
     Valider Le Formulaire De Connexion
@@ -56,6 +59,7 @@ Test Création D'Une Dépense Invalide Caractère Spécial
 
 Test Création D'Une Dépense Invalide Nombre
     [Documentation]    Créer une dépense invalide (nombre)
+    [Tags]    high
     Aller Sur Le Formulaire De Connexion
     Remplir Le Formulaire De Connexion    ${EMAIL_VALIDE}    ${MDP_VALIDE}
     Valider Le Formulaire De Connexion
@@ -67,6 +71,7 @@ Test Création D'Une Dépense Invalide Nombre
 
 Test Création D'Une Dépense Invalide Espace Début
     [Documentation]    Créer une dépense invalide (espace début)
+    [Tags]    high
     Aller Sur Le Formulaire De Connexion
     Remplir Le Formulaire De Connexion    ${EMAIL_VALIDE}    ${MDP_VALIDE}
     Valider Le Formulaire De Connexion
@@ -78,6 +83,7 @@ Test Création D'Une Dépense Invalide Espace Début
 
 Test Création D'Une Dépense Invalide Espace Fin
     [Documentation]    Créer une dépense invalide (espace fin)
+    [Tags]    high
     Aller Sur Le Formulaire De Connexion
     Remplir Le Formulaire De Connexion    ${EMAIL_VALIDE}    ${MDP_VALIDE}
     Valider Le Formulaire De Connexion
@@ -89,6 +95,7 @@ Test Création D'Une Dépense Invalide Espace Fin
 
 Test Création D'Une Dépense Invalide Montant Vide
     [Documentation]    Créer une dépense invalide (montant vide)
+    [Tags]    medium
     Aller Sur Le Formulaire De Connexion
     Remplir Le Formulaire De Connexion    ${EMAIL_VALIDE}    ${MDP_VALIDE}
     Valider Le Formulaire De Connexion
@@ -100,6 +107,7 @@ Test Création D'Une Dépense Invalide Montant Vide
 
 Test Création D'Une Dépense Invalide Montant Négatif
     [Documentation]    Créer une dépense invalide (montant négatif)
+    [Tags]    medium
     Aller Sur Le Formulaire De Connexion
     Remplir Le Formulaire De Connexion    ${EMAIL_VALIDE}    ${MDP_VALIDE}
     Valider Le Formulaire De Connexion
@@ -111,6 +119,7 @@ Test Création D'Une Dépense Invalide Montant Négatif
 
 Test Création D'Une Dépense Invalide Montant Zéro
     [Documentation]    Créer une dépense invalide (montant zéro)
+    [Tags]    medium
     Aller Sur Le Formulaire De Connexion
     Remplir Le Formulaire De Connexion    ${EMAIL_VALIDE}    ${MDP_VALIDE}
     Valider Le Formulaire De Connexion

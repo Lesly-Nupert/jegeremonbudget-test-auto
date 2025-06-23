@@ -24,6 +24,7 @@ ${MONTANT_INVALIDE_ZERO}                    0
 # --- TESTS POSITIFS ---
 Test Création D'Un Revenu Valide
     [Documentation]    Créer un revenu valide
+    [Tags]    critical
     Aller Sur Le Formulaire De Connexion
     Remplir Le Formulaire De Connexion    ${EMAIL_VALIDE}    ${MDP_VALIDE}
     Valider Le Formulaire De Connexion
@@ -36,6 +37,7 @@ Test Création D'Un Revenu Valide
 # --- TESTS NÉGATIFS ---
 Test Création D'Un Revenu Invalide Vide
     [Documentation]    Créer un revenu invalide (vide)
+    [Tags]    medium
     Aller Sur Le Formulaire De Connexion
     Remplir Le Formulaire De Connexion    ${EMAIL_VALIDE}    ${MDP_VALIDE}
     Valider Le Formulaire De Connexion
@@ -47,6 +49,7 @@ Test Création D'Un Revenu Invalide Vide
 
 Test Création D'Un Revenu Invalide Caractère Spécial
     [Documentation]    Créer un revenu invalide (caractère spécial)
+    [Tags]    high
     Aller Sur Le Formulaire De Connexion
     Remplir Le Formulaire De Connexion    ${EMAIL_VALIDE}    ${MDP_VALIDE}
     Valider Le Formulaire De Connexion
@@ -58,6 +61,7 @@ Test Création D'Un Revenu Invalide Caractère Spécial
 
 Test Création D'Un Revenu Invalide Nombre
     [Documentation]    Créer un revenu invalide (nombre)
+    [Tags]    high
     Aller Sur Le Formulaire De Connexion
     Remplir Le Formulaire De Connexion    ${EMAIL_VALIDE}    ${MDP_VALIDE}
     Valider Le Formulaire De Connexion
@@ -69,6 +73,7 @@ Test Création D'Un Revenu Invalide Nombre
 
 Test Création D'Un Revenu Invalide Espace Début
     [Documentation]    Créer un revenu invalide (espace au début)
+    [Tags]    high
     Aller Sur Le Formulaire De Connexion
     Remplir Le Formulaire De Connexion    ${EMAIL_VALIDE}    ${MDP_VALIDE}
     Valider Le Formulaire De Connexion
@@ -80,6 +85,7 @@ Test Création D'Un Revenu Invalide Espace Début
 
 Test Création D'Un Revenu Invalide Espace Fin
     [Documentation]    Créer un revenu invalide (espace à la fin)
+    [Tags]    high
     Aller Sur Le Formulaire De Connexion
     Remplir Le Formulaire De Connexion    ${EMAIL_VALIDE}    ${MDP_VALIDE}
     Valider Le Formulaire De Connexion
@@ -91,6 +97,7 @@ Test Création D'Un Revenu Invalide Espace Fin
 
 Test Création D'Un Revenu Invalide Montant Vide
     [Documentation]    Créer un revenu invalide (montant vide)
+    [Tags]    medium
     Aller Sur Le Formulaire De Connexion
     Remplir Le Formulaire De Connexion    ${EMAIL_VALIDE}    ${MDP_VALIDE}
     Valider Le Formulaire De Connexion
@@ -102,6 +109,7 @@ Test Création D'Un Revenu Invalide Montant Vide
 
 Test Création D'Un Revenu Invalide Montant Négatif
     [Documentation]    Créer un revenu invalide (montant négatif)
+    [Tags]    medium
     Aller Sur Le Formulaire De Connexion
     Remplir Le Formulaire De Connexion    ${EMAIL_VALIDE}    ${MDP_VALIDE}
     Valider Le Formulaire De Connexion
@@ -113,6 +121,7 @@ Test Création D'Un Revenu Invalide Montant Négatif
 
 Test Création D'Un Revenu Invalide Montant Zéro
     [Documentation]    Créer un revenu invalide (montant zéro)
+    [Tags]    medium
     Aller Sur Le Formulaire De Connexion
     Remplir Le Formulaire De Connexion    ${EMAIL_VALIDE}    ${MDP_VALIDE}
     Valider Le Formulaire De Connexion
