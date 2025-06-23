@@ -25,6 +25,7 @@ Aller Sur Le Formulaire De Connexion
 Remplir Le Formulaire De Connexion
     [Arguments]    ${email}    ${motdepasse}
     Input Text     ${CHAMP_EMAIL_CONNEXION}         ${email}
+    Click Element  ${CHAMP_MOT_DE_PASSE_CONNEXION}
     Input Password     ${CHAMP_MOT_DE_PASSE_CONNEXION}  ${motdepasse}
 
 Valider Le Formulaire De Connexion
