@@ -23,16 +23,31 @@ ${MDP_INVALIDE_SANS_CARACTERE_SPECIAL}    Test1234
 *** Test Cases ***                                          EMAIL                 MDP                             RESULTAT
 # ✅ Traçabilité des tests avec les résultats attendus (Exemple : Connexion Données Valides va avec SUCCES)
 Connexion Données Valides                                   ${EMAIL_VALIDE}      ${MDP_VALIDE}                    SUCCES
+    [Tags]    critical
 Connexion Email Vide                                        ${EMPTY}             ${MDP_VALIDE}                    ERREUR_EMAIL_VIDE
+    [Tags]    medium
 Connexion Email Invalide                                    ${EMAIL_INVALIDE}    ${MDP_VALIDE}                    ERREUR_EMAIL_INVALIDE
+    [Tags]    high
+Connexion Email Vide                                        ${EMPTY}             ${MDP_VALIDE}                    ERREUR_EMAIL_VIDE
+    [Tags]    medium
+Connexion Email Invalide                                    ${EMAIL_INVALIDE}    ${MDP_VALIDE}                    ERREUR_EMAIL_INVALIDE
+    [Tags]    high
 Connexion Email Invalide Sans Arobase                       ${EMAIL_INVALIDE_SANS_AROBASE}    ${MDP_VALIDE}       ERREUR_EMAIL_INVALIDE_SANS_AROBASE
+    [Tags]    high
 Connexion Email Invalide Caractère Spécial                  ${EMAIL_INVALIDE_CARACTERE_SPECIAL}    ${MDP_VALIDE}  ERREUR_EMAIL_CARACTERE_SPECIAL
+    [Tags]    high
 Connexion Mot De Passe Vide                                 ${EMAIL_VALIDE}     ${EMPTY}                          ERREUR_MDP_VIDE
+    [Tags]    medium
 Connexion Mot De Passe Invalide 7 Caractères                ${EMAIL_VALIDE}     ${MDP_INVALIDE_7_CARACTERES}      ERREUR_MDP_7_CARACTERES
+    [Tags]    high
 Connexion Mot De Passe Invalide 13 Caractères               ${EMAIL_VALIDE}     ${MDP_INVALIDE_13_CARACTERES}     ERREUR_MDP_13_CARACTERES
+    [Tags]    high
 Connexion Mot De Passe Invalide Sans Majuscule              ${EMAIL_VALIDE}     ${MDP_INVALIDE_SANS_MAJUSCULE}    ERREUR_MDP_SANS_MAJUSCULE
+    [Tags]    high
 Connexion Mot De Passe Invalide Sans Chiffre                ${EMAIL_VALIDE}     ${MDP_INVALIDE_SANS_CHIFFRE}      ERREUR_MDP_SANS_CHIFFRE
+    [Tags]    high
 Connexion Mot De Passe Invalide Sans Caractère Spécial      ${EMAIL_VALIDE}     ${MDP_INVALIDE_SANS_CARACTERE_SPECIAL}  ERREUR_MDP_SANS_CARACTERE_SPECIAL
+    [Tags]    high
 
 *** Keywords ***
 Template Test Connexion
