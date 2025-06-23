@@ -28,10 +28,6 @@ Connexion Email Vide                                        ${EMPTY}            
     [Tags]    medium
 Connexion Email Invalide                                    ${EMAIL_INVALIDE}    ${MDP_VALIDE}                    ERREUR_EMAIL_INVALIDE
     [Tags]    high
-Connexion Email Vide                                        ${EMPTY}             ${MDP_VALIDE}                    ERREUR_EMAIL_VIDE
-    [Tags]    medium
-Connexion Email Invalide                                    ${EMAIL_INVALIDE}    ${MDP_VALIDE}                    ERREUR_EMAIL_INVALIDE
-    [Tags]    high
 Connexion Email Invalide Sans Arobase                       ${EMAIL_INVALIDE_SANS_AROBASE}    ${MDP_VALIDE}       ERREUR_EMAIL_INVALIDE_SANS_AROBASE
     [Tags]    high
 Connexion Email Invalide Caractère Spécial                  ${EMAIL_INVALIDE_CARACTERE_SPECIAL}    ${MDP_VALIDE}  ERREUR_EMAIL_CARACTERE_SPECIAL
