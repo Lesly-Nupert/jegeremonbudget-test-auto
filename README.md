@@ -162,7 +162,7 @@ robot --include tag       # Filtrer par tags
 - **High** : 23 tests - Validations importants (Non bloquant)
 - **Medium** : 14 tests - Validations secondaires
 
-## Reporting automatique
+## 💾 Reporting automatique
 Les rapports affichent automatiquement :
 - Taux de réussite/échec
 - Statistiques par niveau de criticité  
