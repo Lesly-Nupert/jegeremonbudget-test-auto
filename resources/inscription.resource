@@ -42,7 +42,7 @@ Remplir Le Formulaire D'Inscription
     Run Keyword If    ${cocher_conditions}    Click Element    ${CASE_CONDITIONS}
 
 Valider Le Formulaire D'Inscription
-    # ✅ "${status}    Run Keyword And Return Status" # Vérifie que le message d'alerte est affiché et récupère son statut mais sans faire échouer le test si le message n'est pas visible (Solution pour contourner les messages d'erreur HTML natifs non visibles dans le DOM)
+    # ✅ "${status}    Run Keyword And Return Status" Vérifie que le message d'alerte est affiché et récupère son statut mais sans faire échouer le test si le message n'est pas visible (Solution pour contourner les messages d'erreur HTML natifs non visibles dans le DOM)
     Click Button    ${BOUTON_VALIDATION}
     ${status}    Run Keyword And Return Status    Wait Until Element Is Visible    ${MESSAGE_ALERT}    timeout=20s
 

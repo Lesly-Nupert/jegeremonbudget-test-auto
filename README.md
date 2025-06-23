@@ -162,24 +162,24 @@ robot --include tag       # Filtrer par tags
 - **High** : 23 tests - Validations importants (Non bloquant)
 - **Medium** : 14 tests - Validations secondaires
 
-### Lancement des tests par Tags possible :
-```bash
-# Tests bloquants uniquement
-robot --include critical --outputdir results tests/
-
-# Tests importants 
-robot --include high --outputdir results tests/
-
-# Tests mineurs
-robot --include medium --outputdir results tests/
-```
-
-### Reporting automatique
+## Reporting automatique
 Les rapports affichent automatiquement :
 - Taux de réussite/échec
 - Statistiques par niveau de criticité  
 - Indicateurs pour décisions Go/No-Go
 
+## 🤔 Défis Techniques et Solutions
+**1. Variable dynamique pour CI/CD**  
+**Défi** : Besoin d'un email dynamique dans le module Inscription afin d'éviter le message d'erreur "Cet email existe déjà"  
+**Solution** : Création du Keyword *"Générer Email Unique"* avec timestamp.
+
+**2. Messages d'erreurs HTML natifs vs applicatifs**  
+**Défi** : Les messages HTML natifs ne s'affichent pas dans le DOM - Ils n'ont donc pas de Locators.  
+**Solution** : Utilisation du keyword *"Run Keyword And Return Status"* qui permet de ne pas faire échouer le test même si le message n'est pas visible - C'est le test qui fera la véritable vérification avec le keyword "Vérifier Formulaire Inscription Non Soumis"
+
+**3. Élément visible mais non cliquable en Jenkins**  
+**Défi** : ElementClickInterceptedException sur le menu burger.  
+**Solution** : Utilisation de Javascript - *"Execute JavaScript"*
 
 ## 📸 Captures d'écran
 
