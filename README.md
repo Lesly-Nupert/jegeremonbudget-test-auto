@@ -17,7 +17,7 @@ Portfolio de tests automatisés développé pour l'application web [JeGereMonBud
 ## 🏗️ Architecture du projet
 
 ```
-MONBUDGET-TEST-AUTO/
+JEGEREMONBUDGET-TEST-AUTO/
 ├── 📁 tests/
 │   ├── inscription.robot              ← Tests classiques (6 tests)
 │   ├── connexion.robot                ← Tests template (11 tests)
@@ -41,7 +41,7 @@ MONBUDGET-TEST-AUTO/
 ```
 ## Structure des fichiers
 
-### commun.resource (ressource commune)
+### commun.resource (ressources communes)
 ```robot
 *** Settings ***        # Configuration et imports
 *** Variables ***       # Variables globales (locators, données)
@@ -69,14 +69,14 @@ MONBUDGET-TEST-AUTO/
 
 ## 🚀 Technologies utilisées
 
-| Technologie |  | Usage |
-|-------------|---------|-------|
-| **Robot Framework** |  | Framework de test automatisé |
-| **SeleniumLibrary** |  | Pilotage navigateur web |
-| **Python** |  | Langage support Robot Framework |
-| **Jenkins** |  | Pipeline CI/CD et rapports |
-| **Chrome** |  | Navigateur de test |
-| **Git/GitHub** |  | Versioning |
+| Technologie | Usage |
+|-------------|-------|
+| **Robot Framework** | Framework de test automatisé |
+| **SeleniumLibrary** | Pilotage navigateur web |
+| **Python** | Langage support Robot Framework |
+| **Jenkins** | Pipeline CI/CD et rapports |
+| **Chrome** | Navigateur de test |
+| **Git/GitHub** | Versioning |
 
 ---
 ## 🔧 Plugin VSCode
@@ -158,7 +158,7 @@ robot --include tag       # Filtrer par tags
 
 ### [Tags] avec 3 niveaux de criticité
 
-- **Critical** : 5 tests - Fonctionnalités essentielles (Bloquant si echec)
+- **Critical** : 5 tests - Fonctionnalités essentielles (Bloquant si échec)
 - **High** : 23 tests - Validations importants (Non bloquant)
 - **Medium** : 14 tests - Validations secondaires
 
