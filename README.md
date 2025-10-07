@@ -64,7 +64,7 @@ JEGEREMONBUDGET-TEST-AUTO/
 *** Keywords ***        # Keywords spécifiques à ce fichier - optionnel (utilisé dans le Template Connexion)
 ```
 ### Supports
-- **[Documentation Robot Framework](https://robotframework.org/)**
+- **[Documentation Robot Framework](https://docs.robotframework.org/docs/examples/project_structure)**
 - **[Documentation SeleniumLibrary](https://robotframework.org/SeleniumLibrary/SeleniumLibrary.html#library-documentation-top)**
 - **[Documentation BuilIn](https://robotframework.org/robotframework/latest/libraries/BuiltIn.html#Sleep)**
 
