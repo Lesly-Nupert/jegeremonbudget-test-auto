@@ -37,6 +37,8 @@ JEGEREMONBUDGET-TEST-AUTO/
     ├── report.html                    ← Rapport de synthèse
     ├── output.xml                     ← Données brutes
     └── selenium-screenshot-*.png
+├── .gitignore
+├── README.md    
 
 ```
 ## Structure des fichiers
